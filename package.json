@@ -1,0 +1,32 @@
+{
+  "name": "news-digest-agent",
+  "version": "1.0.0",
+  "description": "Daily Headline Digest Agent for Telex.im",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "mastra dev",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "mastra",
+    "telex",
+    "a2a",
+    "news"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@ai-sdk/google": "^2.0.28",
+    "@mastra/core": "^0.23.3",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
