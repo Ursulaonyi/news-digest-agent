@@ -4,7 +4,6 @@
   "description": "Daily Headline Digest Agent for Telex.im",
   "type": "module",
   "main": "dist/index.js",
-  "type": "module",
   "scripts": {
     "dev": "npx mastra dev",
     "build": "tsc",
