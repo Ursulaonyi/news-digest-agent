@@ -4,16 +4,11 @@
   "description": "Daily Headline Digest Agent for Telex.im",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "mastra dev",
+    "dev": "npx mastra dev",
     "build": "tsc",
     "start": "node dist/index.js"
   },
-  "keywords": [
-    "mastra",
-    "telex",
-    "a2a",
-    "news"
-  ],
+  "keywords": ["mastra", "telex", "a2a", "news"],
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
