@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "npx mastra dev",
     "build": "tsc",
-    "start": "tsx src/index.ts"
+    "start": "node dist/index.js"
   },
   "keywords": [
     "mastra",
