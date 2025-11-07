@@ -1,6 +1,6 @@
 import { Mastra } from '@mastra/core';
-import { newsDigestAgent } from './agents/news-agent';
-import { a2aAgentRoute } from '../routes/a2a-agent-route';
+import { newsDigestAgent } from './agents/news-agent.js';
+import { a2aAgentRoute } from '../routes/a2a-agent-route.js';
 
 export const mastra = new Mastra({
   agents: {

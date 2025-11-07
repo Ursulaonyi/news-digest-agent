@@ -1,7 +1,7 @@
 import { Agent } from '@mastra/core';
 import { z } from 'zod';
 import { google } from '@ai-sdk/google';
-import { fetchNews } from '../tools/news-tools';
+import { fetchNews } from '../tools/news-tools.js';
 
 const newsToolSchema = z.object({
   topic: z.string()
