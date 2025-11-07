@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import { mastra } from './mastra/index.js';
+import { newsDigestAgent } from './mastra/agents/news-agent.js';
 
 const app = express();
 const PORT = process.env.PORT || 4111;
@@ -12,13 +13,24 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-// You can add your mastra routes here
-// For now, just a basic endpoint
+// Chat endpoint with newsDigestAgent
 app.post('/api/chat', async (req, res) => {
   try {
-    // Your mastra agent logic here
-    res.json({ message: 'API working' });
+    const { message } = req.body;
+    
+    if (!message) {
+      return res.status(400).json({ error: 'Message is required' });
+    }
+
+    // Call your newsDigestAgent
+    const result = await newsDigestAgent.generate(message);
+    
+    res.json({ 
+      message: result.text,
+      agent: 'newsDigestAgent'
+    });
   } catch (error) {
+    console.error('Error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
