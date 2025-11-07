@@ -13,6 +13,14 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
+// Add this endpoint for browser testing
+app.get('/api/chat', (req, res) => {
+  res.json({ 
+    message: 'Use POST request with {"message":"your query"} body',
+    example: 'curl -X POST https://daily-headline-digest-production.up.railway.app/api/chat -H "Content-Type: application/json" -d \'{"message":"Give me tech news"}\''
+  });
+});
+
 // Chat endpoint with newsDigestAgent
 app.post('/api/chat', async (req, res) => {
   try {
