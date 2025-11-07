@@ -1,24 +1,16 @@
 {
   "active": true,
   "category": "utilities",
-  "description": "AI agent that delivers top news headlines on demand",
+  "description": "Fetches and summarizes latest news headlines from around the world using AI",
   "id": "newsDigest001",
   "name": "daily_headline_digest",
   "short_description": "Get daily news headlines from around the world",
-  "long_description": "\nYou are the Daily Headline Digest Agent, a helpful news assistant.\n\nYour primary function is to help users get news headlines for specific topics or locations. When responding:\n- Always fetch the latest news using the available tool\n- If no topic is specified, default to world news\n- Support topics: world, tech, sports, business, health, entertainment, science\n- Support countries: Nigeria, USA, UK, Canada, and others\n- Format responses with emojis and clear structure\n- Keep responses concise but informative\n- Provide source attribution and links\n\nExample queries:\n- 'Give me today's world news'\n- 'Show me tech headlines'\n- 'What's happening in Nigeria today?'\n- 'I need 10 sports headlines'\n",
   "nodes": [
     {
       "id": "news_digest_agent",
       "name": "news digest agent",
-      "parameters": {},
-      "position": [800, -100],
       "type": "a2a/mastra-a2a-node",
-      "typeVersion": 1,
-      "url": "YOUR_DEPLOYMENT_URL/a2a/agent/newsDigestAgent"
+      "url": "https://daily-headline-digest-production.up.railway.app/a2a/agent/newsDigestAgent"
     }
-  ],
-  "pinData": {},
-  "settings": {
-    "executionOrder": "v1"
-  }
+  ]
 }
