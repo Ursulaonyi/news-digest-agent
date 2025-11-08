@@ -118,20 +118,8 @@ export async function handleA2ARequest(req: Request, res: Response) {
       },
     ];
 
-    // Add tool results as artifacts if available
-    if (response.toolResults && Array.isArray(response.toolResults) && response.toolResults.length > 0) {
-      artifacts.push({
-        artifactId: randomUUID(),
-        name: 'ToolResults',
-        kind: 'artifact',
-        parts: [
-          {
-            kind: 'text',
-            text: JSON.stringify(response.toolResults, null, 2),
-          },
-        ],
-      });
-    }
+    // Tool results are already included in the agent response text
+    // No need to add them as separate artifacts for Telex
 
     // Build conversation history
     const history = [
